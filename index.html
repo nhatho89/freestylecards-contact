@@ -3,31 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact FreestyleCards Support</title>
+  <title>Freestyle Cards Support</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #1a73e8;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      background: #1a73e8;
+      color: #fff;
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #1666c1;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Contact Support</h1>
-  <p>Please use this form for questions or support requests.</p>
+  <div class="container">
+    <h1>Freestyle Cards Support</h1>
+    <p>Have questions or need help? Send us a message below.</p>
 
-  <form action="https://formspree.io/f/mdkynglv" method="POST">
-    <label>
-      Your Name:<br>
-      <input type="text" name="name" required>
-    </label>
-    <br><br>
-    <label>
-      Your Email:<br>
-      <input type="email" name="_replyto" required>
-    </label>
-    <br><br>
-    <label>
-      Message:<br>
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-    <br><br>
-    <button type="submit">Send</button>
-  </form>
+    <form action="https://formspree.io/f/mdkynglv" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
 
-  <p>This page is for support only. We do not spam.</p>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="footer">
+      We respect your privacy. Your email will only be used for support.
+    </div>
+  </div>
 </body>
 </html>
